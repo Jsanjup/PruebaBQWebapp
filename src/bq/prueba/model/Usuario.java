@@ -1,9 +1,12 @@
-package bq.prueba;
+package bq.prueba.model;
+
+
 
 public class Usuario {
 	private String name;
 	private String email;
 	private String nick;
+	private Integer id;
 	
 	public Usuario(){
 	}
@@ -36,5 +39,19 @@ public class Usuario {
 	
 	public void setNick(String nick){
 		this.nick = nick;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

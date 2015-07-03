@@ -1,4 +1,4 @@
-package bq.prueba;
+package bq.prueba.controllers;
 
 import java.util.ArrayList;
 import java.util.logging.Logger;
@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.ui.ModelMap;
+
+import bq.prueba.model.Mensaje;
+import bq.prueba.model.Usuario;
 
 @Controller
 @RequestMapping("/index")

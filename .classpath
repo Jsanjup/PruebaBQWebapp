@@ -9,6 +9,10 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/Users/Sanju/Downloads/commons-logging-1.2/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="/Users/Sanju/Downloads/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/Sanju/Downloads/spring-framework-4.1.7.RELEASE/libs/spring-jdbc-4.1.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/Sanju/Downloads/spring-framework-4.1.7.RELEASE/libs/spring-beans-4.1.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/Sanju/Downloads/spring-framework-4.1.7.RELEASE/libs/spring-core-4.1.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/Sanju/Downloads/spring-framework-4.1.7.RELEASE/libs/spring-expression-4.1.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/Sanju/Downloads/spring-framework-4.1.7.RELEASE/libs/spring-tx-4.1.7.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

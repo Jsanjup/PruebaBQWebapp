@@ -1,4 +1,4 @@
-package bq.prueba;
+package bq.prueba.controllers;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.portlet.ModelAndView;
 import org.springframework.ui.ModelMap;
+
+import bq.prueba.model.Mensaje;
 
 @Controller
 @RequestMapping("/snd_msg")

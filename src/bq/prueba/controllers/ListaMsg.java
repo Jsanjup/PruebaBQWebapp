@@ -1,4 +1,4 @@
-package bq.prueba;
+package bq.prueba.controllers;
 
 import java.util.ArrayList;
 

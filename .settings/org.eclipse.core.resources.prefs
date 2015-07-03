@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/bq/prueba/EnviarMsg.java=UTF-8
-encoding//src/bq/prueba/ListaMsg.java=UTF-8
-encoding//src/bq/prueba/MainApp.java=UTF-8
-encoding//src/bq/prueba/Registro.java=UTF-8
+encoding//src/bq/prueba/controllers/EnviarMsg.java=UTF-8
+encoding//src/bq/prueba/controllers/ListaMsg.java=UTF-8
+encoding//src/bq/prueba/controllers/MainApp.java=UTF-8
+encoding//src/bq/prueba/controllers/Registro.java=UTF-8
