@@ -2,6 +2,7 @@ package bq.prueba.controllers;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,8 @@ import bq.prueba.model.UsuarioJDBCTemplate;
 @Controller
 
 public class EnviarMsg{
+	
+	private static final Logger logger = Logger.getLogger(EnviarMsg.class);
 	
 	@Autowired
 	UsuarioJDBCTemplate usuarioDao;
@@ -40,6 +43,7 @@ public class EnviarMsg{
 	  MainApp.alert_msg = msg.getText() + " añadido con éxito";
 	  }
 	  catch (EmptyResultDataAccessException e) {
+		  logger.error("Error, el usuario " + msg.getAuthor() + " no puede publicar porque no se encuentra en la base de datos");
 		  MainApp.alert_msg = "Error, el usuario " + msg.getAuthor() + " no puede publicar porque no se encuentra en la base de datos";
 	  }
       return "redirect:index";

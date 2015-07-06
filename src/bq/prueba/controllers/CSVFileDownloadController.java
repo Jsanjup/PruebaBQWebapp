@@ -32,7 +32,7 @@ public class CSVFileDownloadController {
 	
     @RequestMapping(value = "/csvExport", method = RequestMethod.GET)
     public void downloadCSV(Model model, HttpServletResponse response) throws IOException {
- 
+    	model.addAttribute("title", "Exportados todos los mensajes en el fichero mensajes.csv");
         String csvFileName = "mensajes.csv";
  
         response.setContentType("text/csv");
