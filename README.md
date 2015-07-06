@@ -28,6 +28,7 @@ A su vez, creación del index.jsp con las 3 simples opciones: crear nuevo usuari
 nombre, email y nick para el usuario y autor y texto para los mensajes  (todos String).
 5- Creación del resto de vistas (registro, enviar mensaje e historial) y los controladores asociados siguiendo el mismo modelo.
 6- Exportación de la webapp como WAR a la carpeta "webapps" del servidor tomcat y pruebas de ejecución en "localhost:8080/PruebaBQWebapp/".
+7- Integración de logging: inclusión de la libreria log4j de apache. Configuración del archivo log4j.properties para indicar el archivo en el que se guarde el log y marcar el umbral a nivel "error", para filtrar unicamente los mensajes introducidos por mí (a nivel de error).
 
 B - Integración con la base de datos.
 
