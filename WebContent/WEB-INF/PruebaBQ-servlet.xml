@@ -21,8 +21,12 @@
       <property name="url" value="jdbc:mysql://localhost:3306/pruebaBQ"/>
       <property name="username" value="root" />     
    </bean>
+   
+<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <property name="host" value="mail.mycompany.com"/>
+</bean>
 
-   <!-- declare beans -->  
+   <!-- declare DAO beans -->  
  <bean id="usuarioDao" class="bq.prueba.model.UsuarioJDBCTemplate" />  
  <bean id="mensajeDao" class="bq.prueba.model.MensajeJDBCTemplate" />
  
