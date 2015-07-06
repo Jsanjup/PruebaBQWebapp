@@ -1,5 +1,8 @@
 package bq.prueba.model;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Map;
 
@@ -73,5 +76,19 @@ public class MensajeJDBCTemplate implements MensajeDAO {
 		JdbcTemplate jdbcTemplateObject = new JdbcTemplate(dataSource);  
 		List<String> resultSetList = jdbcTemplateObject.queryForList(SQL, String.class);
 		return resultSetList;
+	}
+
+	@Override
+	public void saveDBtoCSV(String file) {
+		try {
+			Connection con = dataSource.getConnection();
+			Statement st = con.createStatement();
+			String query = "SELECT id,author,text into OUTFILE '"+file+ "' FIELDS TERMINATED BY ',' FROM Mensaje";
+            st.executeQuery(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return;	
 	}
 }

@@ -20,7 +20,7 @@
 
 Filtrar por autor:
 
-<form method="post">
+<form method="post" action="filterAuthor">
 <select name="authorlist">
 <option value="none" disabled selected>Seleccione un usuario</option>
 <c:forEach items="${autores}" var="autor">   
@@ -29,6 +29,10 @@ Filtrar por autor:
 <option value="all">Ver todos</option>
 </select>
 <input type="submit">
+</form>
+
+<form method="GET" action="csvExport">
+<input type="submit" value="Exportar CSV"> 
 </form>
 </body>
 </html>

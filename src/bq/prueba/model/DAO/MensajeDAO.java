@@ -21,5 +21,7 @@ public interface MensajeDAO {
 	   public void delete(Integer id);
 	   
 	   public void update(Integer id, String text);
+	   
+	   public void saveDBtoCSV (String file);
 
 }

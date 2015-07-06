@@ -16,13 +16,12 @@ import bq.prueba.model.Mensaje;
 import bq.prueba.model.MensajeJDBCTemplate;
 
 @Controller
-@RequestMapping("/lista_msg")
 public class ListaMsg{
 	
 	@Autowired
 	MensajeJDBCTemplate mensajeDao;
  
-   @RequestMapping(method = RequestMethod.GET)
+   @RequestMapping(value = "/lista_msg",method = RequestMethod.GET)
    public String historial(ModelMap model) {
 	   model.addAttribute("title", "Todos los mensajes");
 	   List<Mensaje> mensajes = mensajeDao.listMensajes();
@@ -33,7 +32,7 @@ public class ListaMsg{
       return "lista_msg";
    }
    
-   @RequestMapping(method = RequestMethod.POST)
+   @RequestMapping(value = "/filterAuthor", method = RequestMethod.POST)
    public String filtrarAutor(ModelMap model,@RequestParam(value="authorlist") String author ) {
 	   if (!author.equals("none") && ! author.equals("all")){
 	   model.addAttribute("title", "Mensajes de " + author);
