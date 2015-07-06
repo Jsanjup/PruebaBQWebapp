@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1> ${title}</h1>
-<form method="post">
+<form method="post" action= "addMessage">
   Autor: <input type="text" name="author"><br>
   Texto: <input type="text" name="text"><br>
   <input type="submit" value="Submit">

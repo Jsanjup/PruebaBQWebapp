@@ -7,12 +7,11 @@ import javax.sql.DataSource;
 import bq.prueba.model.Usuario;
 
 public interface UsuarioDAO {
-
-	   public void setDataSource(DataSource ds);
-	   
 	   public void create(String name, String email, String nick);
 	   
 	   public Usuario getUsuario(Integer id);
+	   
+	   public Usuario getUsuario(String nick);
 	   
 	   public List<Usuario> listUsuarios();
 	   

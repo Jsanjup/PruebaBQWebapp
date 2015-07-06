@@ -13,7 +13,6 @@ public class MensajeMapper implements RowMapper<Mensaje> {
       Mensaje Mensaje = new Mensaje();
       Mensaje.setId(rs.getInt("id"));
       Mensaje.setAuthor(rs.getString("author"));
-      Mensaje.setAuthorId(rs.getInt("authorid"));
       Mensaje.setText(rs.getString("text"));
       return Mensaje;
    }

@@ -7,16 +7,16 @@ import javax.sql.DataSource;
 import bq.prueba.model.Mensaje;
 
 public interface MensajeDAO {
-	
-	public void setDataSource(DataSource ds);
 	   
-	   public void create(String author, String text, Integer authorId);
+	   public void create(String author, String text);
 	   
 	   public Mensaje getMensaje(Integer id);
 	   
 	   public List<Mensaje> listMensajes();
 	   
-	   public List<Mensaje> mensajesDe (Integer authorId);
+	   public List<String> listAutores();
+	   
+	   public List<Mensaje> mensajesDe (String author);
 	   
 	   public void delete(Integer id);
 	   

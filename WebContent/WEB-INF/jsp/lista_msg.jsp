@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.List"%>
 <%@ page import="bq.prueba.model.Mensaje"%>
 <html>
 <head>
@@ -9,7 +9,7 @@
 <body>
 <h1> ${title}</h1>
 
-<h2>Hay ${mensajes.size()} mensajes </h2>
+<h2>Hay ${mensajes.size()} mensajes de ${autores.size()} autores distintos</h2>
 
 <c:forEach items="${mensajes}" var="msg">     
    <h2>${msg.getAuthor()}</h2>
@@ -18,5 +18,17 @@
 
 
 
+Filtrar por autor:
+
+<form method="post">
+<select name="authorlist">
+<option value="none" disabled selected>Seleccione un usuario</option>
+<c:forEach items="${autores}" var="autor">   
+  <option value="${autor}">${autor}</option>
+</c:forEach>
+<option value="all">Ver todos</option>
+</select>
+<input type="submit">
+</form>
 </body>
 </html>

@@ -14,5 +14,16 @@
       <property name="prefix" value="/WEB-INF/jsp/" />
       <property name="suffix" value=".jsp" />
    </bean>
+   
+   <bean id="dataSource" 
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      <property name="url" value="jdbc:mysql://localhost:3306/pruebaBQ"/>
+      <property name="username" value="root" />     
+   </bean>
+
+   <!-- declare beans -->  
+ <bean id="usuarioDao" class="bq.prueba.model.UsuarioJDBCTemplate" />  
+ <bean id="mensajeDao" class="bq.prueba.model.MensajeJDBCTemplate" />
  
 </beans>

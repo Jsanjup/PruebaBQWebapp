@@ -4,7 +4,6 @@ public class Mensaje {
 	private String author;
 	private String text;
 	private Integer id;
-	private Integer authorId;
 	
 	/**
 	 * @return the author
@@ -42,16 +41,5 @@ public class Mensaje {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	/**
-	 * @return the authorId
-	 */
-	public Integer getAuthorId() {
-		return authorId;
-	}
-	/**
-	 * @param authorId the authorId to set
-	 */
-	public void setAuthorId(Integer authorId) {
-		this.authorId = authorId;
-	}
+
 }
